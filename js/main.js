@@ -217,8 +217,8 @@
     window.addEventListener('load', function () { window.setTimeout(dismissSplash, 900); }, { once: true });
     window.setTimeout(dismissSplash, 3000);
   }
-  var footer = document.querySelector('.site-footer');
-  if (footer && 'IntersectionObserver' in window) {
+  var footerCopy = document.querySelector('.site-footer .copy');
+  if (footerCopy && 'IntersectionObserver' in window) {
     var footerObserver = new IntersectionObserver(function (entries) {
       document.body.classList.toggle('footer-visible', entries[0].isIntersecting);
       if (entries[0].isIntersecting) {
@@ -228,7 +228,7 @@
         );
       }
     });
-    footerObserver.observe(footer);
+    footerObserver.observe(footerCopy);
   }
 
   /* ---- Chat ---- */
