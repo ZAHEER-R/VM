@@ -1246,9 +1246,9 @@ section { padding: 60px 0; }
 @media (max-width: 560px) {
   :root { --header-h: 76px; }
   .site-footer {
-    position: static;
-    bottom: auto;
-    z-index: auto;
+    position: sticky;
+    bottom: 0;
+    z-index: 80;
     width: 100%;
   }
   .w { padding-left: 16px; padding-right: 16px; }
